@@ -1,0 +1,54 @@
+<view class='explain_head'>
+    <text class='explain_title'>
+    </text>
+</view>
+<view class='explain_flex'>
+<view class='explain_left'>
+</view>
+<view class='explain_middle'>
+    <text decode="{{true}}">
+    &emsp;&emsp;插入排序是排序算法的基础算法 其基本原理为将一个数组的元素插入到已经排好序的数组中 这样对于存在n个元素的数组array 我们需要将n个元素依次插入到排好序的数组中 对于数组首元素 不需要插入 因为对于它而言 它就是数组本身 即为有序序列 若新加入一元素 此元素需要与首元素比较 根据比较结果选择交换与否 完成后为有序数组 依次类推 每次都要与前面的有序数组进行比较 若大于前一个元素 交换 继续比较 若小于或等于 不再比较 算法时间复杂度为O(N^2)
+    </text>
+    <text>
+        介绍完插入排序的基本原理 下面来看一看实际的例子：
+    </text>
+    <text>
+    这里给出一个数组
+      <text class='explain_text_strong' >
+        array:1 15 8 26 14 13 一共有6个元素
+      </text>
+      首先,我们希望获得从小到大排序的数组 根据插入排序 需要进行5次插入
+    </text>\n
+    <text>
+      <text decode='{{true}}'>1.\n&emsp;1{{lt}}15 不交换\n&emsp;\narray：1，15，8，26，14，13</text>\n
+      <text decode='{{true}}'>2.\n&emsp;15{{gt}}8 交换\n&emsp;1{{lt}}8 不交换\n&emsp;\narray:：1，8，15，26，14，13</text>\n
+      <text decode='{{true}}'>3.\n&emsp;26{{gt}}15 不交换\n&emsp;\narray:：1，8，15，26，14，13</text>\n
+      <text decode='{{true}}'>4.\n&emsp;14{{lt}}26 交换\n&emsp;14{{lt}}15 交换\n&emsp;14{{gt}}8 不交换\n&emsp;\narray:：1，8，14，15，26，13</text>\n
+      <text decode='{{true}}'>5.\n&emsp;13{{lt}}26 交换\n&emsp;13{{lt}}15 交换\n&emsp;13{{lt}}14交换\n&emsp;13{{gt}}8 不交换\n&emsp;\narray:：1，8，13，14，15，26</text>\n
+      这样 通过插入排序算法就完成了对array数组的排序工作
+    </text>\n
+    <text class='explain_code_style'>
+      #include {{lt}}iostream{{gt}}\n
+      using namespace std;\n
+      \n
+      int main(){\n
+          int array[6] = {1,15,8,26,14,13};\n
+          int length = 6;\n
+          int temp;\n
+          for(int outter = 1; outter {{lt}} length; ++outter){\n
+            for(int index = outter; index {{gt}} 0; --index){\n
+              if ( array[index] {{lt}} array[index-1]){\n
+                temp = array[index-1];\n
+                array[index-1] = array[index];\n
+                array[index] = temp;\n
+              }\n
+            }\n
+          }\n
+          return 0;\n
+      }\n
+    </text>
+
+</view>
+<view class='explain_right'>
+</view>
+</view>

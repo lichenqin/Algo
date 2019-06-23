@@ -1,0 +1,25 @@
+<view class='link_head'></view>
+  <view class='link_flex'>
+    <view class='link_left'></view>
+    <view class='link_middle'>
+      <text decode="{{true}}" class= "linkListCoding-style">
+      这里要向中间添加新的节点&emsp;既需要考虑到新增节点的上一个节点的next指针\n
+      还要考虑到新增节点的next指针能够指到下一个节点\n
+      这就需要考虑新增节点的顺序问题了！\n
+      具体实现代码如下:\n
+      </text>
+      <text decode="{{true}}" class= "linkListCoding-style">
+      //头指针为空指针，新插入结点指针为ptr，遍历指针为sort\n
+      sort=head;\n
+      while(sort->next!=null) {\n
+      &emsp;if(sort->data==wantedData) {\n
+        &emsp;&emsp;break;\n
+      &emsp;}\n
+      &emsp;sort=sort->next;\n
+      }\n
+      ptr->next=sort->next;\n
+      sort->next=ptr;
+      </text>
+  </view>
+  <view class='link_right'></view>
+</view>

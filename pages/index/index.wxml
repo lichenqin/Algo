@@ -1,0 +1,40 @@
+  <view class="head-style">
+      <text class="font-style">欢迎！</text>
+      <text class="font-style">本程序提供部分算法以及数据结构的演示 讲解</text>
+      <text class="font-style">希望这一次的体验 能够让你感受到算法的美妙</text>
+  </view>
+
+  <swiper indicator-dots='true'>
+    <swiper-item>
+      <view class="middle" bindtap='sort'>
+
+          <image src="/images/sort.png" class="image-middle"></image>
+
+      </view>
+    </swiper-item>
+
+    <swiper-item>
+      <view class="middle"  bindtap='linklist'>
+
+        <image src="/images/linkList.png" class="image-middle"></image>
+      
+      </view>
+    </swiper-item>
+
+    <swiper-item>
+      <view class="middle" bindtap='binaryTree'>
+     
+          <image src="/images/binaryTree.png" class="image-middle"></image>
+
+      </view>
+    </swiper-item>
+
+    <swiper-item>
+      <view class="middle" bindtap='problems'>
+     
+          <image src="/images/problems.png" class="image-middle"></image>
+
+      </view>
+    </swiper-item>
+
+</swiper>

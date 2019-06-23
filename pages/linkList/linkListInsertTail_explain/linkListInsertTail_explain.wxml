@@ -1,0 +1,21 @@
+<view class='link_head'></view>
+  <view class='link_flex'>
+    <view class='link_left'></view>
+    <view class='link_middle'>
+      <text decode="{{true}}" class= "linkListCoding-style">
+      这里要向末尾添加新的节点&emsp;就不需要考虑很多\n
+      要保证新增节点的next指针指向空\n
+      上一个节点的next指针指向新增节点\n
+      具体实现代码如下:\n
+      </text>
+      <text decode="{{true}}" class= "linkListCoding-style">
+        //头指针为空指针，新插入结点指针为ptr，遍历指针为sort\n
+        sort=head;\n
+        while(sort->next!=null) {\n
+        &emsp;sort=sort->next;\n
+        }\n
+        sort->next=ptr;
+      </text>
+    </view>
+  <view class='link_right'></view>
+</view>

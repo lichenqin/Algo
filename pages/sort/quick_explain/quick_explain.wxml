@@ -1,0 +1,66 @@
+<view class='explain_head'>
+    <text class='explain_title'>
+    </text>
+</view>
+<view class='explain_flex'>
+<view class='explain_left'>
+</view>
+<view class='explain_middle'>
+    <text decode="{{true}}">
+    &emsp;&emsp;快速排序是C.R.A.Hoare于1962年提出的一种划分交换排序。它采用了一种分治的策略，通常称其为分治法(Divide-and-ConquerMethod)。该方法的基本思想是：1．先从数列中取出一个数作为基准数。2．分区过程，将比这个数大的数全放到它的右边，小于或等于它的数全放到它的左边。3．再对左右区间重复第二步，直到各区间只有一个数。最后快速排序的时间复杂度为O(nlogn)
+    </text>
+    <text>
+        介绍完快速排序的基本原理 下面来看一看实际的例子：
+    </text>
+    <text>
+
+      <text class='explain_text_strong' >
+        array:1 15 8 26 14 13 一共有6个元素
+      </text>
+      首先,我们希望获得从小到大排序的数组 根据快速排序 我们需要选择基准值 这里我们始终以最左侧的值为其基准值
+    </text>
+    <text>
+      <text decode='{{true}}'>1.\n&emsp;最左侧的基准值为1 我们从右侧开始寻找可以放在基准值1左侧的元素 遍历之后发现无法找到 且1的左侧已无元素 说明1的 左侧到1这一部分的数组已为正序排序\n&emsp;\narray：1，15，8，26，13，14</text>\n
+      <text decode='{{true}}'>2.\n&emsp;从1的右侧开始进行快速排序 选取最左侧的基准值为15  从右侧开始寻找可以放在基准值15左侧的元素 找到14 将值15覆盖为14 现在从左侧开始寻找可以放在基准值右侧的元素 找到26 将值14覆盖为26 从右侧寻找可以放在基准值左侧的值 找到13 将值26覆盖为13 从左侧出发 发现未找到可以放到基准值右侧的值 将基准值15赋值给值为13的位置\n&emsp;\narray:：1，14，8，13，15，26</text>\n
+      <text decode='{{true}}'>3.\n&emsp;从15的左侧开始进行快速排序 选取最左侧的基准值为14 从右侧开始寻找可以放在基准值14左侧的元素 找到13 将14位置的值置为13 现在从左侧开始寻找可以放在基准值右侧的元素 发现未找到 将基准值14赋值给值为13的位置\n&emsp;\narray:：1，13，8，14，15，26</text>\n
+      <text decode='{{true}}'>4.\n&emsp;从14的左侧开始进行快速排序 选取最左侧的基准值为13 从右侧开始寻找可以放在基准值13左侧的元素 找到8 将13位置的值置为8 现在从左侧开始寻找可以放在基准值右侧的元素 发现未找到 将基准值13赋值给值为8的位置\n&emsp;\narray:：1，8，13，14，15，26</text>\n
+      <text decode='{{true}}'>5.\n&emsp;从8的左侧开始进行快速排序 发现已无可排序元素 返回\n&emsp;\narray:：1，8，13，14，15，26</text>\n
+      <text decode='{{true}}'>6.\n&emsp;从8的右侧至13的左侧开始进行快速排序 发现已无可排序元素 返回\n&emsp;\narray:：1，8，13，14，15，26</text>\n
+      <text decode='{{true}}'>6.\n&emsp;从13的右侧至14的左侧开始进行快速排序 发现已无可排序元素 返回\n&emsp;\narray:：1，8，13，14，15，26</text>\n
+      <text decode='{{true}}'>6.\n&emsp;从14的右侧开始进行快速排序 以15为基准值 从右侧开始寻找可以放在基准值15左侧的元素 没有找到 返回\n&emsp;\narray:：1，8，13，14，15，26</text>\n
+      
+      这样 通过快速排序算法就完成了对array数组的排序工作 代码如下：
+    </text>\n
+    <text class='explain_code_style'>
+      void My_QuickSort(int *left, int *right){\n
+	      if( left {{gt}}= right){\n
+		      return;\n
+	      }\n
+	      int *head = left;\n
+	      int *end = right;\n
+	      int base = *left;\n
+	
+	      while( left != right){\n
+		      while( *right {{gt}}= base && right != left){\n
+			      --right;\n
+		      }\n
+		      while( *left {{lt}}= base && left != right){\n
+			      ++left;\n
+		      }
+		      int temp = *left;\n
+		      *left = *right;\n
+		      *right = temp;\n
+	      }\n
+	      int temp = *left;\n
+	      *left = *head;\n
+	      *head = temp;\n
+
+        My_QuickSort(head, left-1);\n
+	      My_QuickSort(right+1,end);\n
+      }
+    </text>
+
+</view>
+<view class='explain_right'>
+</view>
+</view>

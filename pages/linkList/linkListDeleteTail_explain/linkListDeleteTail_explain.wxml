@@ -1,0 +1,26 @@
+<view class='link_head'></view>
+  <view class='link_flex'>
+    <view class='link_left'></view>
+    <view class='link_middle'>
+      <text decode="{{true}}" class= "linkListCoding-style">
+      这里要删除末尾的节点&emsp;首先需要找到该节点\n
+      只有最后一个节点的next指向为空 所以方便找到\n
+      释放最后一个节点的空间 令倒数第二个节点的指针指向空\n
+      具体实现代码如下:\n
+      </text>
+      <text decode="{{true}}" class= "linkListCoding-style">
+        //头指针为空指针，要删除结点指针为ptr，遍历指针为sort\n
+        sort=head;\n
+        while(sort->next!=null) {\n
+        &emsp;if(sort->next->next==null) {\n
+        &emsp;&emsp;break;
+        &emsp;}\n
+        &emsp;sort=sort->next;
+        }\n
+        ptr=sort->next\n
+        sort->next=null;\n
+        delete ptr;
+      </text>
+    </view>
+  <view class='link_right'></view>
+</view>

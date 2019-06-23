@@ -1,0 +1,58 @@
+<view class='explain_head'>
+    <text class='explain_title'>
+    </text>
+</view>
+<view class='explain_flex'>
+<view class='explain_left'>
+</view>
+<view class='explain_middle'>
+    <text decode="{{true}}">
+    &emsp;&emsp;选择排序是排序算法的基础算法&emsp;选择排序是排序算法的基础算法&emsp;其基本原理为每次遍历一个数组的元素并找寻最大值并记录最大值对应的数组元素的位置&emsp;对于n个元素&emsp;遍历n-1次&emsp;第k次遍历n-k个元素&emsp;每次选出n-k个元素中最大值并与n-k个元素中的末元素（或首元素）交换&emsp;算法时间复杂度为O(N^2)
+    </text>
+    <text>
+        介绍完选择排序的基本原理 下面来看一看实际的例子：
+    </text>
+    <text>
+    这里给出一个数组
+      <text class='explain_text_strong' >
+        array:1 15 8 26 14 13 一共有6个元素
+      </text>
+      首先,我们希望获得从小到大排序的数组 根据选择排序 需要选择5次
+    </text>
+    <text>
+      <text decode='{{true}}'>1.\n&emsp;最大值为26&emsp;第4个数组元素&emsp;与数组第6个元素交换 \n&emsp;\narray：1，15，8，13，14，26</text>\n
+      <text decode='{{true}}'>2.\n&emsp;最大值为15 第2个数组元素 与数组第5个元素交换 \n&emsp;\narray:：1，14，8，13，15，26</text>\n
+      <text decode='{{true}}'>3.\n&emsp;最大值为14 第2个数组元素 与数组第4个元素交换\n&emsp;\narray:：1，13，8，14，15，26</text>\n
+      <text decode='{{true}}'>4.\n&emsp;最大值为13 第2个数组元素 与数组第3个元素交换\n&emsp;\narray:：1，8，13，14，15，26</text>\n
+      <text decode='{{true}}'>5.\n&emsp;最大值为8 第2个数组元素 与数组第2个元素交换\n&emsp;\narray:：1，8，13，14，15，26</text>\n
+      这样 通过选择排序算法就完成了对array数组的排序工作 代码如下：
+    </text>\n
+    <text class='explain_code_style'>
+      #include {{lt}}iostream{{gt}}\n
+      using namespace std;\n
+      \n
+      int main(){\n
+          int array[6] = {1,15,8,26,14,13};\n
+          int length = 6;\n
+          int max = array[0];\n
+          int max_index = 0;\n
+
+          for(int outter = 0; outter {{lt}} length-1; ++outter){\n
+            int index = 0;\n
+            for(int index = 0; index {{lt}} length-outter; ++index){\n
+              if ( array[index] {{gt}} max){\n
+                max = array[index];\n
+                max_index] = index;\n
+              }\n
+              array[max_index] = array[index];\n
+              array[index] = max;\n
+            }\n
+          }\n
+          return 0;\n
+      }\n
+    </text>
+
+</view>
+<view class='explain_right'>
+</view>
+</view>
