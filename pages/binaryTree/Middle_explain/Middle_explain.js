@@ -1,4 +1,4 @@
-// pages/linkList/linkListDeletetPre_explain/linkListDeletePre_explain.js
+// pages/binaryTree/Middle_explain/Middle_explain.js
 Page({
 
   /**

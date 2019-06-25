@@ -1,3 +1,5 @@
 {
+    "navigationBarBackgroundColor": "#4372c2",
+    "navigationBarTextStyle": "white",
   "navigationBarTitleText": "链表中间结点删除"
 }

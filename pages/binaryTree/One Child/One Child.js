@@ -30,7 +30,7 @@ Page({
     })
   },
 
-  linkListDisplay: function () {
+  BinaryTreeDisplay: function () {
     var systemInfo = wx.getSystemInfoSync()
     var animation1 = wx.createAnimation({     //比较箭头
       duration: 600
@@ -126,4 +126,9 @@ Page({
     })
   },
 
+  BinaryTreeExplain: function () {
+    wx.navigateTo({
+      url: "/pages/binaryTree/OneChild_explain/OneChild_explain"
+    })
+  }
 })

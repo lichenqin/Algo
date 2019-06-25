@@ -75,7 +75,7 @@
   </view>
   <!--button布局-->
   <view class="button-view">
-    <button bindtap='linkListDisplay' class="button-style" disabled="{{judge}}">display</button>
-    <button bindtap='linkListExplain' class="button-style" style="background-color: #6cf">explain</button>
+    <button bindtap='BinaryTreeDisplay' class="button-style" disabled="{{judge}}">display</button>
+    <button bindtap='BinaryTreeExplain' class="button-style" style="background-color: #6cf">explain</button>
   </view>
 </view>

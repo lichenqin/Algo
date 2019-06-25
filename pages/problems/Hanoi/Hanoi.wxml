@@ -1,0 +1,4 @@
+<!--pages/problems/Hanoi/Hanoi.wxml-->
+<view class='head-style'>
+  <image src="/images/Maintain.png"></image>
+</view>

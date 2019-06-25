@@ -1,0 +1,4 @@
+<!--pages/problems/Queen/Queen.wxml-->
+<view class='head-style'>
+  <image src="/images/Maintain.png"></image>
+</view>

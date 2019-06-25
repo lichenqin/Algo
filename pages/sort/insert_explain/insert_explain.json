@@ -1,3 +1,5 @@
 {
+  "navigationBarBackgroundColor": "#64b16e",
+  "navigationBarTextStyle": "white",
   "navigationBarTitleText": "插入排序讲解"
 }

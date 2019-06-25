@@ -52,7 +52,7 @@ Page({
     })
   },
 
-  linkListDisplay: function () {
+  BinaryTreeDisplay: function () {
     var systemInfo = wx.getSystemInfoSync()
     var animation1 = wx.createAnimation({     //比较箭头
       duration: 600
@@ -193,5 +193,11 @@ Page({
       count: 1
     })
   },
+
+  BinaryTreeExplain: function(){
+    wx.navigateTo({
+      url: "/pages/binaryTree/Min_explain/Min_explain"
+    })
+  }
 
 })

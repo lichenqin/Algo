@@ -15,7 +15,10 @@
     "pages/sort/quick_explain/quick_explain",
     "pages/sort/selectSort/selectSort",
     "pages/sort/select_explain/select_explain",
-
+    "pages/sort/mergeSort/mergeSort",
+    "pages/sort/merge_explain/merge_explain",
+    "pages/sort/heapSort/heapSort",
+    "pages/sort/heap_explain/heap_explain",
     
     "pages/linkList/linkListInsertPre/linkListInsertPre",
     "pages/linkList/linkListInsertPre_explain/linkListInsertPre_explain",
@@ -32,11 +35,21 @@
     "pages/linkList/linkListDeleteTail_explain/linkListDeleteTail_explain",
 
     "pages/binaryTree/Min/Min",
+    "pages/binaryTree/Min_explain/Min_explain",
     "pages/binaryTree/Max/Max",
+    "pages/binaryTree/Max_explain/Max_explain",
     "pages/binaryTree/Middle/Middle",
+    "pages/binaryTree/Middle_explain/Middle_explain",
     "pages/binaryTree/None Child/None Child",
+    "pages/binaryTree/NoneChild_explain/NoneChild_explain",
     "pages/binaryTree/One Child/One Child",
-    "pages/binaryTree/Two Child/Two Child"
+    "pages/binaryTree/OneChild_explain/OneChild_explain",
+    "pages/binaryTree/Two Child/Two Child",
+    "pages/binaryTree/TwoChild_explain/TwoChild_explain",
+
+    "pages/problems/Queen/Queen",
+    "pages/problems/Maze/Maze",
+    "pages/problems/Hanoi/Hanoi"
   ],
 
   "window": {
