@@ -1,0 +1,81 @@
+<view class="container" style="background: white;">
+  <!--演示区整体布局-->
+  <view class="displayArea-style">
+    <!--原有二叉树布局-->
+    <view class="tree-style">
+      <!--比较箭头-->
+      <view>
+        <image src="/images/compareArrow.png" class="compareArrow-style" animation="{{animationData1}}"></image>
+      </view>
+      <!--根结点67-->
+      <view class="leaf-style">
+        <text style="color: white;">67</text>
+      </view>
+      <!--第一层树枝-->
+      <view class="entirety-style">
+        <image src="/images/arrow.png" class="leftBranch-style"></image>
+        <image src="/images/arrow.png" class="rightBranch-style"></image>
+      </view>
+      <!--第一层叶子结点-->
+      <view class="entirety-style">
+        <!--结点53-->
+        <view class="leaf-style" style="position: relative; right: 50rpx;">
+          <text style="color: white;">53</text>
+        </view>
+        <!--结点80-->
+        <view class="leaf-style" style="position: relative; left: 50rpx;">
+          <text style="color: white;">80</text>
+        </view>
+      </view>
+      <!--第二层树枝-->
+      <view class="entirety-style">
+        <view style="position: relative; right: 40rpx;">
+          <image src="/images/arrow.png" class="leftBranch-style"></image>
+          <image src="/images/arrow.png" class="rightBranch-style"></image>
+        </view>
+        <view style="position: relative; left: 50rpx;">
+          <image src="/images/arrow.png" class="rightBranch-style"></image>
+        </view>
+      </view>
+      <!--第二层叶子结点-->
+      <view class="entirety-style" style="position: relative; bottom: 10rpx;">
+        <!--结点45-->
+        <view class="leaf-style" style="position: relative; right: 110rpx;">
+          <text style="color: white;">45</text>
+        </view>
+        <!--结点60-->
+        <view class="leaf-style" style="position: relative;">
+          <text style="color: white;">60</text>
+        </view>
+        <!--结点89-->
+        <view class="leaf-style" style="position: relative; left: 110rpx;">
+          <text style="color: white;">89</text>
+        </view>
+      </view>
+      <!--新添加的叶子结点-->
+      <!--第三层树枝-->
+      <view>
+        <image src="/images/arrow.png" class="leftBranch-style" style="position: relative; right: 40rpx; bottom: 10rpx;" animation="{{animationData6}}"></image>
+      </view>
+      <!--第三层叶子结点-->
+      <!--结点56-->
+      <view>
+        <view class="leaf-style" style="position: relative; right: 90rpx; bottom: 30rpx;" animation="{{animationData7}}">
+          <text style="color: white;">56</text>
+        </view>
+      </view>
+      <!--比较说明文本-->
+      <view style="position: relative; top: 50rpx;">
+        <text style="position: relative; left: 240rpx;" animation="{{animationData2}}">插入结点56</text>
+        <text style="position: relative; left: 60rpx;" animation="{{animationData3}}">56小于67</text>
+        <text style="position: relative; right: 100rpx;" animation="{{animationData4}}">56大于53</text>
+        <text style="position: relative; right: 265rpx;" animation="{{animationData5}}">56小于60</text>
+      </view>
+    </view>
+  </view>
+  <!--button布局-->
+  <view class="button-view">
+    <button bindtap='linkListDisplay' class="button-style" disabled="{{judge}}">display</button>
+    <button bindtap='linkListExplain' class="button-style" style="background-color: #6cf">explain</button>
+  </view>
+</view>

@@ -270,3 +270,40 @@
 }
 
 /* 次级界面所需wxss样式截止*/
+
+/*以下均为二叉树所需格式*/
+.tree-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.leaf-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background: orange;
+  border-radius: 50%;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.leftBranch-style {
+  width: 80rpx;
+  height: 80rpx;
+  transform: rotate(130deg);
+}
+
+.rightBranch-style {
+  width: 80rpx;
+  height: 80rpx;
+  transform: rotate(50deg);
+}
+
+.compareArrow-style {
+  width: 90rpx;
+  height: 90rpx;
+}
+/* 二叉树所需wxss样式截止*/

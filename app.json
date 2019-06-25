@@ -29,7 +29,14 @@
     "pages/linkList/linkListDeleteMiddle/linkListDeleteMiddle",
     "pages/linkList/linkListDeleteMiddle_explain/linkListDeleteMiddle_explain",
     "pages/linkList/linkListDeleteTail/linkListDeleteTail",
-    "pages/linkList/linkListDeleteTail_explain/linkListDeleteTail_explain"
+    "pages/linkList/linkListDeleteTail_explain/linkListDeleteTail_explain",
+
+    "pages/binaryTree/Min/Min",
+    "pages/binaryTree/Max/Max",
+    "pages/binaryTree/Middle/Middle",
+    "pages/binaryTree/None Child/None Child",
+    "pages/binaryTree/One Child/One Child",
+    "pages/binaryTree/Two Child/Two Child"
   ],
 
   "window": {
