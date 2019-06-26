@@ -1,17 +1,15 @@
-<view class='link_head'></view>
-<view class='link_flex'>
-  <view class='link_left'></view>
-  <view class='link_middle'>
-    <text decode='{{true}}' class="linkListCoding-style">
-      对于在链表的头部插入元素,需要考虑到的问题是谁做头指针？\n
-      这里头指针为一空指针 所以头指针head必须作为头节点！\n
-      因此 代码应如下：\n
-    </text>
-    <text decode="{{true}}" class= "linkListCoding-style">
+<view class="intro">插入头节点</view>
+<view class="text-style">
+  <text decode="{{true}}">
+    &emsp;对于在链表的头部插入元素,需要考虑到的问题是谁做头指针？\n
+    &emsp;这里头指针为一空指针 所以头指针head必须作为头节点！\n
+    &emsp;因此 代码应如下：\n
+  </text>
+</view>
+<view class='code-style'>
+  <text decode='{{true}}'>
       //头指针为空指针，新插入结点指针为ptr\n
-      ptr->next=head->next;\n
-      head->next=ptr;
-    </text>
-  </view>
-  <view class='link_right'></view>
+       &emsp;&emsp;ptr->next=head->next;\n
+       &emsp;&emsp;head->next=ptr;
+  </text>
 </view>

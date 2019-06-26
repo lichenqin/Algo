@@ -1,20 +1,13 @@
-<view class='explain_head'>
-    <text class='explain_title'>
-    </text>
-</view>
-<view class='explain_flex'>
-<view class='explain_left'>
-</view>
-<view class='explain_middle'>
-    <text decode="{{true}}">
+<view class="intro">快速排序详解</view>
+<view class="text-style">
+  <text decode="{{true}}">
     &emsp;&emsp;快速排序是C.R.A.Hoare于1962年提出的一种划分交换排序。它采用了一种分治的策略，通常称其为分治法(Divide-and-ConquerMethod)。该方法的基本思想是：1．先从数列中取出一个数作为基准数。2．分区过程，将比这个数大的数全放到它的右边，小于或等于它的数全放到它的左边。3．再对左右区间重复第二步，直到各区间只有一个数。最后快速排序的时间复杂度为O(nlogn)
     </text>
     <text>
         介绍完快速排序的基本原理 下面来看一看实际的例子：
     </text>
     <text>
-
-      <text class='explain_text_strong' >
+      <text style='font-weight:bold'>
         array:1 15 8 26 14 13 一共有6个元素
       </text>
       首先,我们希望获得从小到大排序的数组 根据快速排序 我们需要选择基准值 这里我们始终以最左侧的值为其基准值
@@ -31,36 +24,34 @@
       
       这样 通过快速排序算法就完成了对array数组的排序工作 代码如下：
     </text>\n
-    <text class='explain_code_style'>
-      void My_QuickSort(int *left, int *right){\n
-	      if( left {{gt}}= right){\n
-		      return;\n
-	      }\n
-	      int *head = left;\n
-	      int *end = right;\n
-	      int base = *left;\n
-	
-	      while( left != right){\n
-		      while( *right {{gt}}= base && right != left){\n
-			      --right;\n
-		      }\n
-		      while( *left {{lt}}= base && left != right){\n
-			      ++left;\n
-		      }
-		      int temp = *left;\n
-		      *left = *right;\n
-		      *right = temp;\n
-	      }\n
-	      int temp = *left;\n
-	      *left = *head;\n
-	      *head = temp;\n
+  </view>
 
-        My_QuickSort(head, left-1);\n
-	      My_QuickSort(right+1,end);\n
+  <view class='code-style'>
+  <text decode='{{true}}'>
+      void My_QuickSort(int *left, int *right){\n
+	    &emsp;&emsp;if( left {{gt}}= right){\n
+		  &emsp;&emsp;&emsp;return;\n
+	    &emsp;&emsp;}\n
+	    &emsp;&emsp;int *head = left;\n
+	    &emsp;&emsp;int *end = right;\n
+	    &emsp;&emsp;int base = *left;\n
+	    &emsp;&emsp;while( left != right){\n
+		  &emsp;&emsp;&emsp;while( *right {{gt}}= base && right != left){\n
+			&emsp;&emsp;&emsp;&emsp;--right;\n
+		  &emsp;&emsp;&emsp;}\n
+		  &emsp;&emsp;&emsp;while( *left {{lt}}= base && left != right){\n
+			&emsp;&emsp;&emsp;&emsp;++left;\n
+		  &emsp;&emsp;&emsp;}
+		  &emsp;&emsp;&emsp;int temp = *left;\n
+		  &emsp;&emsp;&emsp;*left = *right;\n
+		  &emsp;&emsp;&emsp;*right = temp;\n
+	    &emsp;&emsp;}\n
+	    &emsp;&emsp;int temp = *left;\n
+	    &emsp;&emsp;*left = *head;\n
+	    &emsp;&emsp;*head = temp;\n
+
+      &emsp;&emsp;My_QuickSort(head, left-1);\n
+	    &emsp;&emsp;My_QuickSort(right+1,end);\n
       }
     </text>
-
-</view>
-<view class='explain_right'>
-</view>
 </view>

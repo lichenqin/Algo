@@ -196,7 +196,7 @@ Page({
 
   BinaryTreeExplain: function () {
     wx.navigateTo({
-      url: "/pages/binaryTree/Middle_explain/Middle_explain"
+      url: "/pages/binaryTree/BinaryInsert_explain/BinaryInsert_explain"
     })
   }
 

@@ -1,26 +1,24 @@
-<view class='link_head'></view>
-  <view class='link_flex'>
-    <view class='link_left'></view>
-    <view class='link_middle'>
-      <text decode="{{true}}" class= "linkListCoding-style">
-      这里要删除中间节点&emsp;需要考虑顺序问题\n
-      若直接释放中间节点 会造成链表断开\n
-      所以在释放之前 需要将该节点的上一个节点与下一个节点相连\n
-      具体实现代码如下:\n
-      </text>
-      <text decode="{{true}}" class= "linkListCoding-style">
-        //头指针为空指针，要删除结点指针为ptr，遍历指针为sort\n
-        sort=head;\n
-        while(sort->next!=null) {\n
-        &emsp;if(sort->next->data==wantedData) {\n
-        &emsp;&emsp;break;
-        &emsp;}\n
-        &emsp;sort=sort->next;
-        }\n
-        ptr=sort->next;\n
-        sort->next=sort->next->next;\n
-        delete ptr;
-      </text>
-    </view>
-  <view class='link_right'></view>
+<view class="intro">删除中间节点</view>
+<view class="text-style">
+  <text decode="{{true}}">
+    &emsp;这里要删除中间节点&emsp;需要考虑顺序问题\n
+    &emsp;若直接释放中间节点 会造成链表断开\n
+    &emsp;所以在释放之前 需要将该节点的上一个节点与下一个节点相连\n
+    &emsp;具体实现代码如下:\n
+  </text>
+</view>
+<view class='code-style'>
+  <text decode='{{true}}'>
+    //头指针为空指针，要删除结点指针为ptr，遍历指针为sort\n
+    &emsp;&emsp;sort=head;\n
+    &emsp;&emsp;while(sort->next!=null) {\n
+    &emsp;&emsp;&emsp;if(sort->next->data==wantedData) {\n
+    &emsp;&emsp;&emsp;&emsp;break;
+    &emsp;&emsp;&emsp;}\n
+    &emsp;&emsp;&emsp;sort=sort->next;
+    &emsp;&emsp;}\n
+    &emsp;&emsp;ptr=sort->next;\n
+    &emsp;&emsp;sort->next=sort->next->next;\n
+    &emsp;&emsp;delete ptr;
+  </text>
 </view>

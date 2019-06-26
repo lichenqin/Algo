@@ -35,11 +35,9 @@
     "pages/linkList/linkListDeleteTail_explain/linkListDeleteTail_explain",
 
     "pages/binaryTree/Min/Min",
-    "pages/binaryTree/Min_explain/Min_explain",
     "pages/binaryTree/Max/Max",
-    "pages/binaryTree/Max_explain/Max_explain",
     "pages/binaryTree/Middle/Middle",
-    "pages/binaryTree/Middle_explain/Middle_explain",
+    "pages/binaryTree/BinaryInsert_explain/BinaryInsert_explain",
     "pages/binaryTree/None Child/None Child",
     "pages/binaryTree/NoneChild_explain/NoneChild_explain",
     "pages/binaryTree/One Child/One Child",

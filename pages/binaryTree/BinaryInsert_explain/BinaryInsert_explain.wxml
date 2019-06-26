@@ -1,0 +1,29 @@
+<view class="intro">二叉树插入</view>
+<view class="text-style">
+  <text decode="{{true}}">
+    &emsp;这里要在二叉树中插入某个值&emsp;由于这是一颗二叉搜索树\n
+    &emsp;所以遵循左孩子权值小于节点 右孩子权值大于节点的规则\n
+    &emsp;所以插入某个值时 需要依次进行比较 权值小于节点向左插入 权值大于节点向右插入 等于直接返回 不进行操作\n
+    &emsp;当遍历到二叉树的底部时 找到第一个指向空的位置 将节点插入 而后返回\n
+    &emsp;具体实现代码如下:\n
+  </text>
+</view>
+<view class='code-style'>
+  <text decode='{{true}}'>
+    //根节点为root且不为空，左指针为left，右指针为right\n
+    //待插入节点为node 遍历指针为p 采用分治进行插入\n 
+    &emsp;&emsp;BinaryNode* Insert(int value, BinaryNode* p){\n
+    &emsp;&emsp;&emsp;if(p==NULL){\n
+    &emsp;&emsp;&emsp;&emsp;p=new BinaryNode(value);\n
+    &emsp;&emsp;&emsp;&emsp;return p;\n
+    &emsp;&emsp;&emsp;}\n
+    &emsp;&emsp;&emsp;if(value{{gt}}p-{{gt}}value)\n
+    &emsp;&emsp;&emsp;&emsp;p->right=Insert(value,p->right);\n
+    &emsp;&emsp;&emsp;if(value{{lt}}p-{{gt}}value)\n
+    &emsp;&emsp;&emsp;&emsp;p->left=Insert(value,p->left);\n
+    &emsp;&emsp;&emsp;if(value==p-{{gt}}value)\n
+    &emsp;&emsp;&emsp;&emsp;return p;\n
+    &emsp;&emsp;&emsp;return p;
+    &emsp;&emsp;}
+  </text>
+</view>

@@ -12,5 +12,5 @@
   </view>
 
 <view>
-  <text class='sortFont'>请等待动画完毕再离开界面 否则会造成卡顿</text>
+  <text class='sortFont'>请等待动画完毕再点击按钮或离开界面 否则会造成卡顿</text>
 </view>

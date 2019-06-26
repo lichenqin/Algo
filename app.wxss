@@ -51,40 +51,6 @@
   flex-direction: column;
   justify-content: space-around;
 }
-
-/*链表代码页所需格式*/
-.linkListCoding-style {
-  font-size: 36rpx;
-}
-
-.link_head{
-  height:5vh;
-  width: 100vw;
-}
-
-.link_flex{
-  font-size:smaller;
-  display: flex;
-  justify-content: space-around;
-}
-
-.link_left{
-  background-color: #fff;
-  height:100vh;
-  width: 5vw;
-}
-
-.link_middle{
-  background-color: #fff;
-  height: 100vh;
-  width: 90vw;
-}
-
-.link_right{
-  background-color: #fff;
-  height: 100vh;
-  width:5vw;
-}
 /*链表所需wxss截止*/
 
 /*以下为排序界面所需格式*/
@@ -117,62 +83,82 @@
 }
 
 .sortFont{
-  font-size: 20rpx;
-  color: #000;
+  font-size: 28rpx;
+  color: rgb(241, 12, 12);
   position: absolute;
-  left:25vw;
-  top: 95vh;
+  left:6vw;
+  top: 90vh;
 }
+/* 排序界面所需wxss截止 */
+/* sort所需wxss截止 */
 
-/* 以下为sort讲解界面所需格式 */
-
-.explain_title{
-  font-size:smaller;
-  font-weight: bold;
-  font-style: normal;
-}
-
-.explain_head{
-  height:5vh;
-  width: 100vw;
-}
-
-.explain_flex{
-  font-size:smaller;
+/* 以下均为二叉树所需格式 */
+.tree-style {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.explain_text_strong{
-  font-weight: bold;
+.leaf-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background: orange;
+  border-radius: 50%;
+  width: 60rpx;
+  height: 60rpx;
 }
 
-.explain_code_style{
-  font-size: smaller;
+.leftBranch-style {
+  width: 80rpx;
+  height: 80rpx;
+  transform: rotate(130deg);
 }
 
-.explain_left{
-  background-color: #fff;
-  height:300vh;
-  width: 5vw;
+.rightBranch-style {
+  width: 80rpx;
+  height: 80rpx;
+  transform: rotate(50deg);
 }
 
-.explain_middle{
-  background-color: #fff;
-  height: 300vh;
-  width: 90vw;
+.compareArrow-style {
+  width: 90rpx;
+  height: 90rpx;
+}
+/* 二叉树所需wxss样式截止 */
+
+/* 以下为算法问题所需css样式 */
+.empty-head{
+  height: 20vh;
+  width: 100vw;
+  background-color: white;
+}
+/* 算法问题所需css样式截止 */
+
+/* 以下为讲解界面所需格式 */
+.intro {
+  margin: 20rpx 10rpx 10rpx 10rpx;
+  text-align: center;
+  font-size: 40rpx;
 }
 
-.explain_right{
-  background-color: #fff;
-  height: 300vh;
-  width:5vw;
+.text-style{
+  margin: 10rpx;
+  font-size: 30rpx;
+  color: #2f4f4f;
 }
 
-/* sort所需wxss截止*/
+.code-style{
+  margin: 10rpx;
+  font-size:24rpx;
+  color: #000;
+  background-color: #eee;
+}
+/* 讲解界面所需wxss截止 */
 
-/* 次级界面所需wxss样式*/
-
+/* 次级界面所需wxss样式 */
 .head-style {
   width: 750rpx;
   height: 710rpx;
@@ -269,41 +255,4 @@
   height: auto;
 }
 
-/* 次级界面所需wxss样式截止*/
-
-/*以下均为二叉树所需格式*/
-.tree-style {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.leaf-style {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  background: orange;
-  border-radius: 50%;
-  width: 60rpx;
-  height: 60rpx;
-}
-
-.leftBranch-style {
-  width: 80rpx;
-  height: 80rpx;
-  transform: rotate(130deg);
-}
-
-.rightBranch-style {
-  width: 80rpx;
-  height: 80rpx;
-  transform: rotate(50deg);
-}
-
-.compareArrow-style {
-  width: 90rpx;
-  height: 90rpx;
-}
-/* 二叉树所需wxss样式截止*/
+/* 次级界面所需wxss样式截止 */

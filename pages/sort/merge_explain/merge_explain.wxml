@@ -1,2 +1,73 @@
-<!--pages/sort/merge_explain/merge_explain.wxml-->
-<text>pages/sort/merge_explain/merge_explain.wxml</text>
+<view class="intro">归并排序详解</view>
+<view class="text-style">
+  <text decode="{{true}}">
+    &emsp;&emsp;归并排序是排序算法的进阶算法&emsp;归并排序是排序算法的进阶算法&emsp;归并排序是建立在归并操作上的一种有效的排序算法 该算法是采用分治法的一个非常典型的应用&emsp;将已有序的子序列合并 得到完全有序的序列&emsp;即先使每个子序列有序 再使子序列段间有序&emsp;若将两个有序表合并成一个有序表 称为二路归并&emsp;算法时间复杂度为O(NlogN)
+  </text>
+  <text>
+    介绍完归并排序的基本原理 下面来看一看实际的例子：
+  </text>
+  <text>
+    这里给出一个数组
+      <text style='font-weight:bold' >
+        array:1 15 8 26 14 13 一共有6个元素
+      </text>
+      首先,我们希望获得从小到大排序的数组 根据归并排序 需要3次排序
+  </text>
+  <text>
+      <text decode='{{true}}'>1.\n&emsp;将这组数化为两个两个一组&emsp;如1 15一组8 26一组14 13一组&emsp;将每组的数字进行排序 \n&emsp;\narray：1，15，8，26，13，14</text>\n
+      <text decode='{{true}}'>2.\n&emsp;将排完序的数组两组两组合并排序 对重新组合的数组进行排序 \n&emsp;\narray:：1，8，15，26，13，14</text>\n
+      <text decode='{{true}}'>3.\n&emsp;依照此方法再将排序好的数组两两合并 对重新组合的数组进行排序 并得到最终排序好的数组\n&emsp;\narray:：1，8，13，14，15，26</text>\n
+      这样 通过归并排序算法就完成了对array数组的排序工作 代码如下：
+  </text>\n
+</view>
+<view class='code-style'>
+  <text decode='{{true}}'>
+    #include{{lt}}iostream{{gt}}\n
+    using namespace std;\n
+    void Merge(int *a,int p, int q, int r){\n
+    &emsp;int n1 = q - p + 1;\n
+    &emsp;int n2 = r - q;\n
+    &emsp;int i, j, k;\n
+    &emsp;int *L = new int[n1+1];\n
+    &emsp;int *R = new int[n2+1];\n
+    &emsp;for(i=0;i{{lt}}n1;i++)\n
+    &emsp;&emsp;L[i]=a[p+i];\n
+    &emsp;for(j=0;j{{lt}}n2;j++)\n
+    &emsp;&emsp;R[j]=a[q+j+1];\n
+    &emsp;L[n1]=11111111;\n
+    &emsp;R[n2]=11111111;\n
+    &emsp;for(i=0,j=0,k=p;k{{lt}}=r;k++)\n
+    &emsp;{\n
+    &emsp;&emsp;if(L[i]{{lt}}=R[j])\n
+    &emsp;&emsp;&emsp;a[k]=L[i++];\n
+    &emsp;&emsp;else\n
+    &emsp;&emsp;&emsp; a[k]=R[j++];\n
+    &emsp;}\n
+    &emsp;delete []L;\n
+    &emsp;delete []R;\n
+    }\n
+    void MergeSort(int *a, int l, int r)\n
+    {\n
+    &emsp;if(l{{lt}}r)\n
+    &emsp;{\n
+    &emsp;&emsp;int m = (l+r)/2;\n
+    &emsp;&emsp;MergeSort(a,l,m);\n
+    &emsp;&emsp;MergeSort(a,m+1,r);\n
+    &emsp;&emsp;Merge(a,l,m,r);\n
+    &emsp;}\n
+    }\n
+    int main()\n
+    {\n
+    &emsp;int i;\n
+    &emsp;int a[6]={1,15,8,26,14,13};\n
+    &emsp;for(i=0;i{{lt}}6;i++)\n
+    &emsp;&emsp;cout{{lt}}{{lt}}a[i]{{lt}}{{lt}}" ";\n
+    &emsp;cout{{lt}}{{lt}}endl;\n
+    &emsp;MergeSort(a,0,5);\n
+    &emsp;for(i=0;i{{lt}}6;i++)\n
+    &emsp;&emsp;cout{{lt}}{{lt}}a[i]{{lt}}{{lt}}" ";\n
+    &emsp;cout{{lt}}{{lt}}endl;\n
+    &emsp;return 0;\n
+    }\n
+  </text>
+</view>

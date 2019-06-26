@@ -1,4 +1,5 @@
 <!--pages/problems/Maze/Maze.wxml-->
+<view class='empty-head'></view>
 <view class='head-style'>
   <image src="/images/Maintain.png"></image>
 </view>
