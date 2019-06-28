@@ -107,35 +107,52 @@ Page({
     var origin_array = this.data.array;     //origin_array 读取 数据
     var origin_length = origin_array.length;//获取origin_array的长度
     var width = this.data.gaspWidth;
-    var outter;//冒泡外层循环
-    var index;//内层循环
-    var step;//动画每次一多少
-    var temp_value;
-    for (outter = 0; outter < origin_length; ++outter) {
-      for (index = 0; index < origin_length - outter - 1; ++index) {
-        this.compare(index, index + 1);//比较函数将比较的两个矩形绘图成灰色
-        this.static_delay();
-        if (origin_array[index] > origin_array[index + 1]) { //二者相比较
-          for (step = 2; step <= width; step += 2) {
-            this.move(index, index + 1, step);
-            console.log(step);
-            this.delay();
+    var time = 1; //time用来记录2的几次方
+    var index = 1;
+
+    do{ //开始按2分组 之后为4 8 16
+      index += index
+      var inner = 0;
+      for(; inner <= origin_length>>time; ++inner){ //每次分成几组
+        var first = inner*index;//算出每组元素的首地址
+        var second = first+(index/2);
+
+        for(var element = 0; element < index-1; ++element){
+          if( first >= origin_length || second >= origin_length
+              || second >= (inner+1)*index || first == second )
+            break;
+          this.compare(first, second);
+          this.static_delay();
+          if( origin_array[first] > origin_array[second]){
+            for( var step = 2; step <= width; step += 2){
+              this.move(first, step, second, (second-first)*step);
+              this.delay();
+            }
+            var temp = origin_array[second]
+            for(var array_index = second; array_index > first; --array_index)
+              origin_array[array_index] = origin_array[array_index-1];
+            origin_array[first] = temp;
+
+            first += 1;
+            second += 1;
           }
-          temp_value = origin_array[index + 1];
-          origin_array[index + 1] = origin_array[index];
-          origin_array[index] = temp_value;
+          else{
+            first += 1;
+          }
         }
       }
-    };
+
+      ++time;
+    }while( index < origin_length);
 
     this.setData({
-      array: origin_array
+       array: origin_array
     })
   },
 
 
 
-  move(index_first, index_second, step) {//移动两个元素(就是上色功能)
+  move(index_first, first_step ,index_second, second_step) {//移动两个元素(就是上色功能)
     var arr = this.data.array;
     var length = arr.length;
     var i;
@@ -166,7 +183,7 @@ Page({
 
     function move_forward(index, number) {
       content.beginPath();
-      content.rect(start_x + index * width + step, start_y, e_width, -number * 5);
+      content.rect(start_x + index * width + first_step, start_y, e_width, -number * 5);
       content.setFillStyle('red');//设置颜色为绿色
       content.fill();
       content.closePath();
@@ -177,7 +194,7 @@ Page({
 
     function move_back(index, number) {
       content.beginPath();
-      content.rect(start_x + index * width - step, start_y, e_width, -number * 5);
+      content.rect(start_x + index * width - second_step, start_y, e_width, -number * 5);
       content.setFillStyle('red');//设置颜色为绿色
       content.fill();
       content.closePath();
@@ -188,7 +205,7 @@ Page({
 
     for (i = 0; i < length; ++i) {
       value = arr[i];
-      if (i == index_first) {
+      if (i >= index_first && i < index_second) {
         move_forward(i, value);
       }
       else if (i == index_second) {

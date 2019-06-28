@@ -1,1 +1,9 @@
-/* pages/sort/heap_explain/heap_explain.wxss */
+.heap-image-style{
+  display: flex;
+  justify-content: space-around;
+}
+
+.heap-image-content{
+  width: 300rpx;
+  height: 300rpx;
+}
