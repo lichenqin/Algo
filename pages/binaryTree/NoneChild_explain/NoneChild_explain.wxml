@@ -1,0 +1,22 @@
+<view class="intro">删除无孩子节点</view>
+<view class="text-style">
+  <text decode="{{true}}">
+    &emsp;无孩子节点的删除比较简单\n
+    &emsp;直接删除该节点即可\n
+    &emsp;具体实现代码如下:\n
+  </text>
+</view>
+<view class='code-style'>
+  <text decode='{{true}}'>
+    //根节点为root且不为空，左指针为left，右指针为right\n
+    //待删除节点为node 遍历指针为p 采用分治进行删除\n 
+    &emsp;&emsp;BinaryNode* Delete(int value, BinaryNode* p){\n
+    &emsp;&emsp;&emsp;if(p==NULL){\n
+    &emsp;&emsp;&emsp;&emsp;return p;\n
+    &emsp;&emsp;&emsp;}\n
+    &emsp;&emsp;&emsp;if(value==p-{{gt}}value)\n
+    &emsp;&emsp;&emsp;&emsp;delete p\n
+    &emsp;&emsp;&emsp;return NULL;
+    &emsp;&emsp;}
+  </text>
+</view>

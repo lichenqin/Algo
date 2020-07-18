@@ -1,0 +1,27 @@
+<view class="intro">删除两个孩子节点</view>
+<view class="text-style">
+  <text decode="{{true}}">
+    &emsp;删除两个孩子节点的删除比较复杂\n
+    &emsp;对于删除两个孩子的节点 采取懒惰删除的方法 即找到该节点的右侧子树的最大值\n
+    &emsp;将找到的右侧子树最大值替换删除节点的值\n
+    &emsp;而后继续从右侧子树进行删除 将右侧子树的最大值节点删除\n
+    &emsp;具体实现代码如下:\n
+  </text>
+</view>
+<view class='code-style'>
+  <text decode='{{true}}'>
+    //根节点为root且不为空，左指针为left，右指针为right\n
+    //待删除节点为node 遍历指针为p 采用分治进行删除\n 
+    &emsp;&emsp;BinaryNode* Delete(int value, BinaryNode* p){\n
+    &emsp;&emsp;&emsp;if(p==NULL){\n
+    &emsp;&emsp;&emsp;&emsp;return p;\n
+    &emsp;&emsp;&emsp;}\n
+    &emsp;&emsp;&emsp;if(value==p-{{gt}}value){\n
+    &emsp;&emsp;&emsp;&emsp;int temp = Find(value, p->right);\n
+    &emsp;&emsp;&emsp;&emsp;p-{{gt}}value = temp;\n
+    &emsp;&emsp;&emsp;&emsp;p-{{right}} = Delete(temp,p-{{gt}}right);\n
+    &emsp;&emsp;&emsp;&emsp;}\n
+    &emsp;&emsp;&emsp;return p;\n
+    &emsp;&emsp;}\n
+  </text>
+</view>

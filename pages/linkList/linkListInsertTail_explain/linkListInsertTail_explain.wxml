@@ -1,0 +1,19 @@
+<view class="intro">插入尾部节点</view>
+<view class="text-style">
+  <text decode="{{true}}">
+    &emsp;这里要向末尾添加新的节点&emsp;就不需要考虑很多\n
+    &emsp;要保证新增节点的next指针指向空\n
+    &emsp;上一个节点的next指针指向新增节点\n
+    &emsp;具体实现代码如下:\n
+  </text>
+</view>
+<view class='code-style'>
+  <text decode='{{true}}'>
+      //头指针为空指针，新插入结点指针为ptr，遍历指针为sort\n
+      &emsp;&emsp;sort=head;\n
+      &emsp;&emsp;while(sort->next!=null) {\n
+      &emsp;&emsp;&emsp;sort=sort->next;
+      &emsp;&emsp;}\n
+      &emsp;&emsp;sort->next=ptr;\n
+    </text>
+</view>

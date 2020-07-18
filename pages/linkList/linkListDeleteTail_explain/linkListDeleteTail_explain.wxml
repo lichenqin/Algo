@@ -1,0 +1,24 @@
+<view class="intro">删除尾部节点</view>
+<view class="text-style">
+  <text decode="{{true}}">
+    &emsp;这里要删除末尾的节点&emsp;首先需要找到该节点\n
+    &emsp;只有最后一个节点的next指向为空 所以方便找到\n
+    &emsp;释放最后一个节点的空间 令倒数第二个节点的指针指向空\n
+    &emsp;具体实现代码如下:\n
+  </text>
+</view>
+<view class='code-style'>
+  <text decode='{{true}}'>
+  //头指针为空指针，要删除结点指针为ptr，遍历指针为sort\n
+  &emsp;&emsp;sort=head;\n
+  &emsp;&emsp;while(sort->next!=null) {\n
+  &emsp;&emsp;&emsp;if(sort->next->next==null) {\n
+  &emsp;&emsp;&emsp;&emsp;break;
+  &emsp;&emsp;&emsp;}\n
+  &emsp;&emsp;&emsp;sort=sort->next;
+  &emsp;&emsp;}\n
+  &emsp;&emsp;ptr=sort->next\n
+  &emsp;&emsp;sort->next=null;\n
+  &emsp;&emsp;delete ptr;
+  </text>
+</view>

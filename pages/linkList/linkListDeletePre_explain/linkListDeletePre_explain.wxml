@@ -1,0 +1,17 @@
+<view class="intro">删除顶部节点</view>
+<view class="text-style">
+  <text decode="{{true}}">
+    &emsp;这里要删除顶部节点&emsp;需要考虑顺序问题\n
+    &emsp;若直接释放节点 会造成链表断开 head指针的next值未知 会对程序产生危害\n
+    &emsp;所以在释放之前 需要将该节点的上一个节点与下一个节点相连\n
+    &emsp;具体实现代码如下:\n
+  </text>
+</view>
+<view class='code-style'>
+  <text decode='{{true}}'>
+    //头指针为空指针，要删除结点指针为ptr\n
+    &emsp;&emsp;ptr=head->next;\n
+    &emsp;&emsp;head->next=head->next-next;\n
+    &emsp;&emsp;delete ptr;
+  </text>
+</view>

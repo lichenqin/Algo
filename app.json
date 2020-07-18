@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/index/index",
+
+    "pages/sort/sortIndex/sortIndex",
+    "pages/linkList/linkListIndex/linkListIndex",
+    "pages/binaryTree/binaryTreeIndex/binaryTreeIndex",
+    "pages/problems/problemsIndex/problemsIndex",
+
+    "pages/sort/bubbleSort/bubbleSort",
+    "pages/sort/bubble_explain/bubble_explain",
+    "pages/sort/insertSort/insertSort",
+    "pages/sort/insert_explain/insert_explain",
+    "pages/sort/quickSort/quickSort",
+    "pages/sort/quick_explain/quick_explain",
+    "pages/sort/selectSort/selectSort",
+    "pages/sort/select_explain/select_explain",
+    "pages/sort/mergeSort/mergeSort",
+    "pages/sort/merge_explain/merge_explain",
+    "pages/sort/heapSort/heapSort",
+    "pages/sort/heap_explain/heap_explain",
+    
+    "pages/linkList/linkListInsertPre/linkListInsertPre",
+    "pages/linkList/linkListInsertPre_explain/linkListInsertPre_explain",
+    "pages/linkList/linkListInsertMiddle/linkListInsertMiddle",
+    "pages/linkList/linkListInsertMiddle_explain/linkListInsertMiddle_explain",
+    "pages/linkList/linkListInsertTail/linkListInsertTail",
+    "pages/linkList/linkListInsertTail_explain/linkListInsertTail_explain",
+
+    "pages/linkList/linkListDeletePre/linkListDeletePre",
+    "pages/linkList/linkListDeletePre_explain/linkListDeletePre_explain",
+    "pages/linkList/linkListDeleteMiddle/linkListDeleteMiddle",
+    "pages/linkList/linkListDeleteMiddle_explain/linkListDeleteMiddle_explain",
+    "pages/linkList/linkListDeleteTail/linkListDeleteTail",
+    "pages/linkList/linkListDeleteTail_explain/linkListDeleteTail_explain",
+
+    "pages/binaryTree/Min/Min",
+    "pages/binaryTree/Max/Max",
+    "pages/binaryTree/Middle/Middle",
+    "pages/binaryTree/BinaryInsert_explain/BinaryInsert_explain",
+    "pages/binaryTree/None Child/None Child",
+    "pages/binaryTree/NoneChild_explain/NoneChild_explain",
+    "pages/binaryTree/One Child/One Child",
+    "pages/binaryTree/OneChild_explain/OneChild_explain",
+    "pages/binaryTree/Two Child/Two Child",
+    "pages/binaryTree/TwoChild_explain/TwoChild_explain",
+
+    "pages/problems/Queen/Queen",
+    "pages/problems/Maze/Maze",
+    "pages/problems/Hanoi/Hanoi"
+  ],
+
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+
+  "sitemapLocation": "sitemap.json"
+}

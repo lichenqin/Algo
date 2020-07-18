@@ -1,0 +1,27 @@
+<view class="intro">删除一个孩子节点</view>
+<view class="text-style">
+  <text decode="{{true}}">
+    &emsp;删除一个孩子节点比较简单\n
+    &emsp;首先将该节点的父节点的指针连接该节点孩子节点\n
+    &emsp;而后直接删除该节点即可\n
+    &emsp;具体实现代码如下:\n
+  </text>
+</view>
+<view class='code-style'>
+  <text decode='{{true}}'>
+    //根节点为root且不为空，左指针为left，右指针为right\n
+    //待删除节点为node 遍历指针为p 采用分治进行删除\n 
+    &emsp;&emsp;BinaryNode* Delete(int value, BinaryNode* p){\n
+    &emsp;&emsp;&emsp;if(p==NULL){\n
+    &emsp;&emsp;&emsp;&emsp;return p;\n
+    &emsp;&emsp;&emsp;}\n
+    &emsp;&emsp;&emsp;if(value==p-{{gt}}value)\n
+    &emsp;&emsp;&emsp;&emsp;if(p-{{gt}}left!=NULL)\n
+    &emsp;&emsp;&emsp;&emsp;&emsp;BinaryNode* temp = p->left\n
+    &emsp;&emsp;&emsp;&emsp;if(p-{{gt}}right!=NULL)\n
+    &emsp;&emsp;&emsp;&emsp;&emsp;BinaryNode* temp = p->right\n
+    &emsp;&emsp;&emsp;&emsp;delete p\n
+    &emsp;&emsp;&emsp;return temp;
+    &emsp;&emsp;}
+  </text>
+</view>

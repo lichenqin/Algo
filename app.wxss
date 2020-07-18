@@ -1,0 +1,258 @@
+.container {
+  background-color: #eee;
+  height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*以下均为链表所需格式*/
+.displayArea-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.entirety-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.node-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background: rgb(68, 114, 196);
+  border-radius: 50%;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.arrow-style {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.button-style {
+  width: 80%;
+  background-color: #6eb;
+  color: white;
+}
+
+.button-view {
+  height:300rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+/*链表所需wxss截止*/
+
+/*以下为排序界面所需格式*/
+.sort_container{
+  background-color: #fff;
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  justify-content: space-around; 
+}
+
+.sort_canvaStyle{
+  background-color:#eee;
+  width: 750rpx;
+  height: 60vh; 
+}
+
+.sliderStyle{
+  width: 90vw;
+  position:absolute;
+  top:65vh;
+  left: 5vw;
+}
+
+.sliderContainer{
+  height: 5vh;
+  width: 100vw;
+}
+
+.sortFont{
+  font-size: 28rpx;
+  color: rgb(241, 12, 12);
+  position: absolute;
+  left:6vw;
+  top: 90vh;
+}
+/* 排序界面所需wxss截止 */
+/* sort所需wxss截止 */
+
+/* 以下均为二叉树所需格式 */
+.tree-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.leaf-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background: rgb(220,87,18);
+  border-radius: 50%;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.leftBranch-style {
+  width: 80rpx;
+  height: 80rpx;
+  transform: rotate(130deg);
+}
+
+.rightBranch-style {
+  width: 80rpx;
+  height: 80rpx;
+  transform: rotate(50deg);
+}
+
+.compareArrow-style {
+  width: 90rpx;
+  height: 90rpx;
+}
+/* 二叉树所需wxss样式截止 */
+
+/* 以下为算法问题所需css样式 */
+.empty-head{
+  height: 20vh;
+  width: 100vw;
+  background-color: white;
+}
+/* 算法问题所需css样式截止 */
+
+/* 以下为讲解界面所需格式 */
+.intro {
+  margin: 20rpx 10rpx 10rpx 10rpx;
+  text-align: center;
+  font-size: 40rpx;
+}
+
+.text-style{
+  margin: 10rpx;
+  font-size: 30rpx;
+  color: #2f4f4f;
+}
+
+.code-style{
+  margin: 10rpx;
+  font-size:24rpx;
+  color: #000;
+  background-color: #eee;
+}
+/* 讲解界面所需wxss截止 */
+
+/* 次级界面所需wxss样式 */
+.head-style {
+  width: 750rpx;
+  height: 710rpx;
+  background: #fff;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.index-bd {
+  padding: 50rpx 30rpx 50rpx;
+}
+
+.image-head {
+  width : 750rpx;
+  height: 710rpx;
+}
+
+.navigator-box {
+  opacity: 0;
+  position: relative;
+  background-color: #FFFFFF;
+  line-height: 1.41176471;
+  font-size: 34rpx;
+
+  transform: translateY(-50%);
+  transition: .3s;
+}
+.navigator-box-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.navigator {
+  padding: 20rpx 30rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.navigator-text {
+  flex: 1;
+}
+.navigator-arrow {
+  padding-right: 26rpx;
+  position: relative;
+}
+.navigator-arrow:after {
+  content: " ";
+  display: inline-block;
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 2rpx 2rpx 0 0;
+  border-color: #888888;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -8rpx;
+  right: 28rpx;
+}
+
+.kind-list-item {
+  margin: 50rpx 20rpx;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+.kind-list-text{
+  flex: 1;
+  font-size: 30rpx;
+}
+
+.kind-list-img {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.kind-list-item-hd {
+  padding: 30rpx;
+  display: flex;
+  align-items: center;
+
+  transition: opacity .3s;
+}
+.kind-list-item-hd-show {
+  opacity: .2;
+}
+.kind-list-item-bd {
+  height: 0;
+  overflow: hidden;
+}
+.kind-list-item-bd-show {
+  height: auto;
+}
+
+/* 次级界面所需wxss样式截止 */

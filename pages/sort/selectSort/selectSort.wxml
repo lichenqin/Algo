@@ -1,0 +1,15 @@
+  <canvas canvas-id="select" class="sort_canvaStyle"></canvas>
+  <!-- 当使用绝对定位时，文档流后边的 canvas 的显示层级高于前边的 canvas -->
+<view class='sliderContainer'>
+  <view  class='sliderStyle'>
+    <slider name='insertSlider' step='10' bindchange='listen_slider' show-value='true' value='50'/>
+  </view>
+</view>
+<view class='sort_container'>
+  <button bindtap='Process'>Select sort</button>
+  <button bindtap='reset'>Reset</button>
+  <button bindtap='explain'>Explain</button>
+</view>
+<view>
+  <text class='sortFont'>请等待动画完毕再点击按钮或离开界面 否则会造成卡顿</text>
+</view>

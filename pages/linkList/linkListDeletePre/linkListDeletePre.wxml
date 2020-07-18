@@ -1,0 +1,28 @@
+<view class="container" style="background: white;">
+  <!--演示区整体布局-->
+  <view class="displayArea-style" style="position: relative; top: 150rpx;">
+    <!--原有链表布局-->
+    <view class="entirety-style">
+      <!--结点67-->
+      <view class="node-style" animation="{{animationData1}}">
+        <text style="color: white;">67</text>
+      </view>
+      <image src="/images/arrow.png" class="arrow-style" animation="{{animationData1}}"></image>
+      <!--结点53和2-->
+      <view class="node-style" animation="{{animationData2}}">
+        <text style="color: white;">53</text>
+      </view>
+      <image src="/images/arrow.png" class="arrow-style" animation="{{animationData2}}"></image>
+      <view class="node-style" animation="{{animationData2}}">
+        <text style="color: white;">2</text>
+      </view>
+      <image src="/images/arrow.png" class="arrow-style" animation="{{animationData2}}"></image>
+      <text animation="{{animationData2}}">null</text>
+    </view>
+  </view>
+  <!--button布局-->
+  <view class="button-view" style="position: relative; top: 150rpx;">
+    <button bindtap='linkListDisplay' class="button-style">display</button>
+    <button bindtap='linkListExplain' class="button-style" style="background-color: #6cf">explain</button>
+  </view>
+</view>

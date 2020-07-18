@@ -1,0 +1,57 @@
+<view class="intro">堆排序详解</view>
+<view class="text-style">
+  <text decode="{{true}}">
+    &emsp;&emsp;堆排序是利用堆这种数据结构而设计的一种排序算法，堆排序是一种选择排序，它的最坏，最好，平均时间复杂度均为O(nlogn)，它也是不稳定排序。首先简单了解下堆结构。\n
+    &emsp;&emsp;堆是具有以下性质的完全二叉树：每个结点的值都大于或等于其左右孩子结点的值，称为大顶堆；或者每个结点的值都小于或等于其左右孩子结点的值，称为小顶堆。
+  </text>
+  <view class='heap-image-style'>
+    <image src="/images/bigHeap.png" class='heap-image-content'></image>
+    <image src="/images/littleHeap.png" class='heap-image-content'></image>
+  </view>
+   <text decode='{{true}}'>
+    &emsp;&emsp;我们对堆中的结点按层进行编号，将这种逻辑结构映射到数组中就是下面这个样子
+  </text>
+  <text style='font-weight:bold'>
+    大顶堆： 18，9，15，6，7，12\n
+    小顶堆： 6，9，12，18，7，15\n
+  </text>
+  <text decode='{{true}}'>
+    &emsp;&emsp;这里涉及到如何建堆的问题 根据堆的性质 建立堆 需要分两步走：\n
+    &emsp;&emsp;第一步：上滤\n
+    &emsp;&emsp;这里以建立大顶堆加以说明，首先找到最后一个具有孩子节点的节点，判断其孩子节点的值是否大于该节点？若大于则交换，若小于则不交换。而后依次向上遍历，到根节点执行完毕后遍历停止，至此，根节点的值为整个数组的最大值。\n
+    &emsp;&emsp;第二步：下滤\n
+    &emsp;&emsp;虽然上滤可以找到最大值，但在上滤结束后，中间值未必遵守堆性质。例如：\n
+    <text style='font-weight:bold'>
+    原始数组：3，18，9，21\n
+    上滤后：21，3，9，18
+    </text>
+    &emsp;&emsp;很明显，3小于18，堆性质被破坏，为解决该问题，需要进行下滤操作。从非根节点的第一个有孩子的节点出发，比较节点值与孩子节点值，若节点值小于孩子节点值，则进行交换。而后依次向下遍历直至无孩子节点截止，至此，大顶堆建成。\n
+    &emsp;&emsp;堆排序是建立在堆的基础上的排序算法，首先建立大顶堆，而后将根节点的元素与该大顶堆的最后一个元素交换，而后建堆元素个数减一，再进行交换，直到建堆元素变为一个时截止。此时的数组即为拍好序的数组。
+    &emsp;&emsp;具体操作见代码：\n
+  </text>
+  </view>
+
+  <view class='code-style'>
+  <text decode='{{true}}'>
+      void HeapSort(int *array, int length){\n
+      &emsp;&emsp;for(int index = 0; index {{lt}} length-1; ++index){\n
+      &emsp;&emsp;&emsp;BuildHeap(array, length-index);\n
+      &emsp;&emsp;&emsp;int temp = array[length-1-index];\n
+      &emsp;&emsp;&emsp;array[length-1-index] = array[0];\n
+      &emsp;&emsp;&emsp;array[0] = temp;\n
+      &emsp;&emsp;}\n
+      }\n
+      void BuildHeap(int* array, int length){\n
+      &emsp;&emsp;for(int index = length/2-1; index {{gt}}= 0; --index){\n
+      &emsp;&emsp;&emsp;int child_number = index*2+1;\n
+      &emsp;&emsp;&emsp;if( child_number+1 {{lt}} length && array[child_number+1] {{gt}} array[child_number])\n
+      &emsp;&emsp;&emsp;&emsp;child_number += 1;\n
+      &emsp;&emsp;&emsp;if(array[index] {{lt}} array[child_number]){\n
+      &emsp;&emsp;&emsp;&emsp;int temp = array[child_number];\n
+      &emsp;&emsp;&emsp;&emsp;array[child_number] = array[index];\n
+      &emsp;&emsp;&emsp;&emsp;array[index] = temp;\n
+      &emsp;&emsp;&emsp;}\n
+      &emsp;&emsp;}\n
+      }\n
+    </text>
+</view>
